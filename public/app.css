@@ -1,0 +1,168 @@
+html.light, body.light {
+  --text: black;
+  --bg: aliceblue;
+}
+html.light .topnav, body.light .topnav {
+  background-color: #bde0ff;
+}
+html.light table tr, table html.light tr, body.light table tr, table body.light tr {
+  background-color: cadetblue;
+}
+html.light tr:nth-child(even), body.light tr:nth-child(even) {
+  background-color: #9fc5c6;
+}
+html.dark, body.dark {
+  --text: white;
+  --bg: #333;
+}
+html.dark .topnav, body.dark .topnav {
+  background-color: #404040;
+}
+html.dark table tr, table html.dark tr, body.dark table tr, table body.dark tr {
+  background-color: #395f60;
+}
+html.dark tr:nth-child(even), body.dark tr:nth-child(even) {
+  background-color: #4c7e80;
+}
+
+body {
+  background-color: var(--bg);
+  margin: 0;
+}
+
+p, h1, h2, h3, h4, h5, h6, div {
+  color: var(--text);
+  font-family: bold, sans-serif;
+}
+
+.topnav {
+  width: 100%;
+  position: sticky;
+  overflow: hidden;
+  top: 0;
+}
+.topnav a {
+  display: block;
+  color: var(--text);
+  float: left;
+  width: auto;
+  text-align: center;
+  padding: 14px 14px;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: sans-serif bold;
+}
+@media only screen and (min-width: 1100px) {
+  .topnav a {
+    width: 14.28%;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+  }
+}
+.topnav a.active {
+  background-color: hsla(0deg, 100%, 50%, 0.3);
+  color: var(--text);
+}
+.topnav a:hover {
+  background-color: rgba(255, 102, 102, 0.3);
+  color: var(--text);
+}
+
+.center {
+  text-align: center;
+}
+
+table {
+  background-color: black;
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+table tr {
+  color: white;
+}
+table tr th, table tr td {
+  border: 1px solid #a05f9e;
+  padding: 2px;
+}
+table tr th {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.only_out {
+  width: 5%;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: var(--bg);
+}
+
+li {
+  float: left;
+}
+li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+li ahover:not(.active) {
+  background-color: hsla(0deg, 100%, 50%, 0.3);
+}
+li .active {
+  background-color: hsla(0deg, 100%, 50%, 0.3);
+}
+lilast-child {
+  border-right: none;
+}
+
+input[type=submit] {
+  width: 100%;
+  cursor: pointer;
+  padding: 14px 12px;
+  color: white;
+  background-color: CadetBlue;
+  font-family: sans-serif bold;
+  font-style: inherit;
+  font-size: large;
+}
+
+input[type=submit]:hover {
+  background-color: #9fc5c6;
+}
+
+input[type=text], select {
+  width: 100%;
+  padding: 10px 20px;
+  margin: 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-family: arial, sans-serif;
+}
+
+.flya {
+  border-radius: 5px 5px 0 0;
+}
+
+.dropa {
+  border-radius: 0 0 5px 5px;
+}
+
+.botha, .uniqua {
+  border-radius: 5px;
+  margin: 8px 0;
+}
+
+.freespace50 {
+  height: 50px;
+}
