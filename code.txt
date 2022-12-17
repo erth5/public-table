@@ -1,0 +1,13 @@
+<h2 class="center">
+    @isset($openingText)
+        {{$openingText}}
+    @endisset
+</h2>
+
+
+
+<form method="post" action="{{url('/show-public')}}">
+
+
+@foreach($data as $dat)
+        @endforeach
