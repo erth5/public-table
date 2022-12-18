@@ -1,5 +1,5 @@
 // @ts-ignore
-require('./bootstrap');
+// require('./bootstrap');
 
 // own query selector
 let $f = function (object) {

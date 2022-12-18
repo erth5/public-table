@@ -21,7 +21,7 @@
             </tr>
 
             <!-- Vorhandene Einträge anzeigen-->
-            @foreach ($data as $dat)
+            @forelse ($data as $dat)
                 <tr>
                     <td>
                         <label>
@@ -33,8 +33,8 @@
                     <td>
                         <label>
                             <!--    Form by https://laravel.com/docs/4.2/html not found from laravel
-                                     Form::checkbox("chcbox1$dat->mo", 'true') !!}
-                                     name="chcbox1{{ '$dat->id' }}
+                                             Form::checkbox("chcbox1$dat->mo", 'true') !!}
+                                             name="chcbox1{{ '$dat->id' }}
                                         -->
                         </label>
                         <label>
@@ -103,53 +103,55 @@
                         @endphp
                     </td>
                 </tr>
-            @endforeach
+                @empty
+@endforelse
 
 
             <!-- Neuer Eintrag -->
             <tr>
                 <td>
                     <input type="text" name="editor" maxlength="255" placeholder="Your Name">
-                </td>
+                        </td>
 
-                <td>
-                    <label>Your Status
-                        <input type="checkbox" name="chcbox_mo" value="1">
-                    </label>
-                </td>
-                <td>
-                    <label>
-                        <input type="checkbox" name="chcbox_tu" value="true">
-                    </label>
-                </td>
-                <td>
-                    <label>
-                        <input type="checkbox" name="chcbox_we">
-                    </label>
-                </td>
-                <td>
-                    <label>
-                        <input type="checkbox" name="chcbox_th">
-                    </label>
-                </td>
-                <td>
-                    <label>
-                        <input type="checkbox" name="chcbox_fr">
-                    </label>
-                </td>
-                <td>
-                    <label>
-                        <input type="checkbox" name="chcbox_sa">
-                    </label>
-                </td>
-                <td>
-                    <label>
-                        <input type="checkbox" name="chcbox_su" placeholder="{{ $dat->so }}">
-                    </label>
-                </td>
-            </tr>
+                        <td>
+                            <label>Your Status
+                                <input type="checkbox" name="chcbox_mo" value="1">
+                            </label>
+                        </td>
+                        <td>
+                            <label>
+                                <input type="checkbox" name="chcbox_tu" value="true">
+                            </label>
+                        </td>
+                        <td>
+                            <label>
+                                <input type="checkbox" name="chcbox_we">
+                            </label>
+                        </td>
+                        <td>
+                            <label>
+                                <input type="checkbox" name="chcbox_th">
+                            </label>
+                        </td>
+                        <td>
+                            <label>
+                                <input type="checkbox" name="chcbox_fr">
+                            </label>
+                        </td>
+                        <td>
+                            <label>
+                                <input type="checkbox" name="chcbox_sa">
+                            </label>
+                        </td>
+                        {{-- placeholder="{{ $dat->so }}" --}}
+                        <td>
+                            <label>
+                                <input type="checkbox" name="chcbox_su" >
+                            </label>
+                        </td>
+                    </tr>
 
-        </table>
-        <input class="dropa" type="submit" value="Save Data" name="submit_button">
-    </form>
+                </table>
+                <input class="dropa" type="submit" value="Save Data" name="submit_button">
+            </form>
 @endsection
