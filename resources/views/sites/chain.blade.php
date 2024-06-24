@@ -37,8 +37,8 @@
         <input style="word-break: break-all" type="submit" value="Submit" name="submit_button" class="dropa">
     </form>
 
-    @isset($dopple_user_warning)
-        <h2 class="center">{{ $dopple_user_warning }}</h2>
+    @isset($warning)
+        <h2 class="center">{{ $warning }}</h2>
     @endisset
 
     <p class="center"> Like Blockchain </p>

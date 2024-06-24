@@ -47,12 +47,17 @@ class ChainTController extends Controller
         */
 
         // Proof Session ID
-        $session_ID = Cookie::get('laravel_session');
         $data = ChainT::all();
-        $dopple_user_warning = 'You have alraedy write a line in this row';
+        $session_ID = Cookie::get('laravel_session');
+        if ($session_ID === null) {
+            $warning = 'You have no Session ID';
+            return view('sites.chain', compact('data'), compact('warning'));
+        }
+
+        $warning = 'You have alraedy write a line in this row';
         foreach ($data as $editor_ID)
             if ($session_ID == $editor_ID->editor) {
-                return view('sites.chain', compact('data'), compact('dopple_user_warning'));
+                return view('sites.chain', compact('data'), compact('warning'));
             }
         // save new message
         $dat = new ChainT;
