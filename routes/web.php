@@ -26,7 +26,6 @@ Route::get('/', function () {
 // tables as Controllers
 Route::get('/public', [PublicTController::class, 'index'])->name('public');
 Route::post('/update-public', [PublicTController::class, 'update']);
-//Route::post('/show-public', [PublicTController::class, 'show']);
 
 Route::get('/chain', [ChainTController::class, 'index'])->name('chain');
 Route::post('/store-chain', [ChainTController::class, 'store']);

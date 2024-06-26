@@ -394,24 +394,39 @@
                 color: rgba(107, 114, 128, var(--tw-text-opacity))
             }
         }
-
     </style>
-    <link href="app.css" rel="stylesheet">
+    @vite(['resources/sass/app.sass', 'resources/ts/app.ts'])
 
-    <!-- scripts -->
-    <script src="app.js" defer></script>
-
+    <style>
+        body.loading {
+            overflow: hidden;
+        }
+        .preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: white; /* You can change this to your desired color */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+    </style>
 </head>
 
-<body>
-
+<body class="loading">
+    <div class="preloader">
+        <p>Loading...</p>
+    </div>
     <!-- "functions" -->
     @section('content')
         <h1 class="center">please choose a tab</h1>
         <div id="bottom">
             <p class="center">
                 <!--
-            {{ date('h:i:sa') }} {{ date('Y/m/d') }}&nbsp;-->
+                {{ date('h:i:sa') }} {{ date('Y/m/d') }}&nbsp;-->
                 UNIX-Timestamp:&nbsp;{{ time() }}
             </p>
         </div>

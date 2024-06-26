@@ -8,8 +8,9 @@
         // Enable strict type-checking options
         "skipLibCheck": true,
         // Skip type checking of declaration files
-        "noImplicitAny": false
+        "noImplicitAny": false,
         // Bypass raising errors on `any` type
+        "lib": ["es2015", "dom"]
     },
     "exclude": [
         "../node_modules"
